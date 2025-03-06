@@ -6,7 +6,7 @@ main:
     intcblock 0 1 1000 4
     bytecblock "highest_bidder" "highest_bid" base32(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) "assetid" "floorprice"
     // smart_contracts/bidding_contract/contract.py:5
-    // class DigitalMarket(ARC4Contract):
+    // class BiddingMarket(ARC4Contract):
     txn NumAppArgs
     bz main_after_if_else@13
     pushbytess 0x878cbb3d 0x58b40c8c 0x1574535a 0xd65c5c6f 0xaa409b41 0x6d8d58ae 0x33b3499e // method "create_application(asset,uint64)void", method "set_floor_price(uint64)void", method "opt_in_to_asset(pay)void", method "place_bid(pay)void", method "accept_bid()void", method "reject_bid()void", method "delete_application()void"
@@ -15,7 +15,7 @@ main:
 
 main_after_if_else@13:
     // smart_contracts/bidding_contract/contract.py:5
-    // class DigitalMarket(ARC4Contract):
+    // class BiddingMarket(ARC4Contract):
     intc_0 // 0
     return
 
@@ -69,7 +69,7 @@ main_place_bid_route@6:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/bidding_contract/contract.py:5
-    // class DigitalMarket(ARC4Contract):
+    // class BiddingMarket(ARC4Contract):
     txn GroupIndex
     intc_1 // 1
     -
@@ -95,7 +95,7 @@ main_opt_in_to_asset_route@5:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/bidding_contract/contract.py:5
-    // class DigitalMarket(ARC4Contract):
+    // class BiddingMarket(ARC4Contract):
     txn GroupIndex
     intc_1 // 1
     -
@@ -121,7 +121,7 @@ main_set_floor_price_route@4:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/bidding_contract/contract.py:5
-    // class DigitalMarket(ARC4Contract):
+    // class BiddingMarket(ARC4Contract):
     txna ApplicationArgs 1
     btoi
     // smart_contracts/bidding_contract/contract.py:19-20
@@ -142,7 +142,7 @@ main_create_application_route@3:
     !
     assert // can only call when creating
     // smart_contracts/bidding_contract/contract.py:5
-    // class DigitalMarket(ARC4Contract):
+    // class BiddingMarket(ARC4Contract):
     txna ApplicationArgs 1
     btoi
     txnas Assets
@@ -156,7 +156,7 @@ main_create_application_route@3:
     return
 
 
-// smart_contracts.bidding_contract.contract.DigitalMarket.create_application(asset_id: uint64, floor_price: uint64) -> void:
+// smart_contracts.bidding_contract.contract.BiddingMarket.create_application(asset_id: uint64, floor_price: uint64) -> void:
 create_application:
     // smart_contracts/bidding_contract/contract.py:11-13
     // # Create the app
@@ -186,7 +186,7 @@ create_application:
     retsub
 
 
-// smart_contracts.bidding_contract.contract.DigitalMarket.set_floor_price(floor_price: uint64) -> void:
+// smart_contracts.bidding_contract.contract.BiddingMarket.set_floor_price(floor_price: uint64) -> void:
 set_floor_price:
     // smart_contracts/bidding_contract/contract.py:19-21
     // # Update the floor price
@@ -207,7 +207,7 @@ set_floor_price:
     retsub
 
 
-// smart_contracts.bidding_contract.contract.DigitalMarket.opt_in_to_asset(mbrpay: uint64) -> void:
+// smart_contracts.bidding_contract.contract.BiddingMarket.opt_in_to_asset(mbrpay: uint64) -> void:
 opt_in_to_asset:
     // smart_contracts/bidding_contract/contract.py:25-27
     // # Opt in to the asset that will be sold
@@ -285,7 +285,7 @@ opt_in_to_asset:
     retsub
 
 
-// smart_contracts.bidding_contract.contract.DigitalMarket.place_bid(bid_payment: uint64) -> void:
+// smart_contracts.bidding_contract.contract.BiddingMarket.place_bid(bid_payment: uint64) -> void:
 place_bid:
     // smart_contracts/bidding_contract/contract.py:40-42
     // # Place a bid
@@ -388,7 +388,7 @@ place_bid_after_if_else@3:
     retsub
 
 
-// smart_contracts.bidding_contract.contract.DigitalMarket.accept_bid() -> void:
+// smart_contracts.bidding_contract.contract.BiddingMarket.accept_bid() -> void:
 accept_bid:
     // smart_contracts/bidding_contract/contract.py:63
     // assert Txn.sender == Global.creator_address
@@ -500,7 +500,7 @@ accept_bid:
     retsub
 
 
-// smart_contracts.bidding_contract.contract.DigitalMarket.reject_bid() -> void:
+// smart_contracts.bidding_contract.contract.BiddingMarket.reject_bid() -> void:
 reject_bid:
     // smart_contracts/bidding_contract/contract.py:88
     // assert Txn.sender == Global.creator_address
@@ -570,7 +570,7 @@ reject_bid:
     retsub
 
 
-// smart_contracts.bidding_contract.contract.DigitalMarket.delete_application() -> void:
+// smart_contracts.bidding_contract.contract.BiddingMarket.delete_application() -> void:
 delete_application:
     // smart_contracts/bidding_contract/contract.py:105-106
     // # Only allow the creator to delete the application

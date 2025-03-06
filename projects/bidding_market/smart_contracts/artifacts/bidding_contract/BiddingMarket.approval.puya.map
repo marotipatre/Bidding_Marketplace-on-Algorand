@@ -143,7 +143,7 @@
       "stack_out": []
     },
     "161": {
-      "callsub": "smart_contracts.bidding_contract.contract.DigitalMarket.delete_application",
+      "callsub": "smart_contracts.bidding_contract.contract.BiddingMarket.delete_application",
       "op": "callsub delete_application"
     },
     "164": {
@@ -199,7 +199,7 @@
       "stack_out": []
     },
     "173": {
-      "callsub": "smart_contracts.bidding_contract.contract.DigitalMarket.reject_bid",
+      "callsub": "smart_contracts.bidding_contract.contract.BiddingMarket.reject_bid",
       "op": "callsub reject_bid"
     },
     "176": {
@@ -255,7 +255,7 @@
       "stack_out": []
     },
     "185": {
-      "callsub": "smart_contracts.bidding_contract.contract.DigitalMarket.accept_bid",
+      "callsub": "smart_contracts.bidding_contract.contract.BiddingMarket.accept_bid",
       "op": "callsub accept_bid"
     },
     "188": {
@@ -393,7 +393,7 @@
       ]
     },
     "207": {
-      "callsub": "smart_contracts.bidding_contract.contract.DigitalMarket.place_bid",
+      "callsub": "smart_contracts.bidding_contract.contract.BiddingMarket.place_bid",
       "op": "callsub place_bid",
       "stack_out": []
     },
@@ -532,7 +532,7 @@
       ]
     },
     "229": {
-      "callsub": "smart_contracts.bidding_contract.contract.DigitalMarket.opt_in_to_asset",
+      "callsub": "smart_contracts.bidding_contract.contract.BiddingMarket.opt_in_to_asset",
       "op": "callsub opt_in_to_asset",
       "stack_out": []
     },
@@ -607,7 +607,7 @@
       ]
     },
     "245": {
-      "callsub": "smart_contracts.bidding_contract.contract.DigitalMarket.set_floor_price",
+      "callsub": "smart_contracts.bidding_contract.contract.BiddingMarket.set_floor_price",
       "op": "callsub set_floor_price",
       "stack_out": []
     },
@@ -722,7 +722,7 @@
       ]
     },
     "268": {
-      "callsub": "smart_contracts.bidding_contract.contract.DigitalMarket.create_application",
+      "callsub": "smart_contracts.bidding_contract.contract.BiddingMarket.create_application",
       "op": "callsub create_application",
       "stack_out": []
     },
@@ -740,7 +740,7 @@
       "stack_out": []
     },
     "273": {
-      "subroutine": "smart_contracts.bidding_contract.contract.DigitalMarket.create_application",
+      "subroutine": "smart_contracts.bidding_contract.contract.BiddingMarket.create_application",
       "params": {
         "asset_id#0": "uint64",
         "floor_price#0": "uint64"
@@ -850,7 +850,7 @@
       "op": "retsub"
     },
     "292": {
-      "subroutine": "smart_contracts.bidding_contract.contract.DigitalMarket.set_floor_price",
+      "subroutine": "smart_contracts.bidding_contract.contract.BiddingMarket.set_floor_price",
       "params": {
         "floor_price#0": "uint64"
       },
@@ -920,7 +920,7 @@
       "op": "retsub"
     },
     "307": {
-      "subroutine": "smart_contracts.bidding_contract.contract.DigitalMarket.opt_in_to_asset",
+      "subroutine": "smart_contracts.bidding_contract.contract.BiddingMarket.opt_in_to_asset",
       "params": {
         "mbrpay#0": "uint64"
       },
@@ -1251,7 +1251,7 @@
       "op": "retsub"
     },
     "369": {
-      "subroutine": "smart_contracts.bidding_contract.contract.DigitalMarket.place_bid",
+      "subroutine": "smart_contracts.bidding_contract.contract.BiddingMarket.place_bid",
       "params": {
         "bid_payment#0": "uint64"
       },
@@ -1773,7 +1773,7 @@
       "op": "retsub"
     },
     "446": {
-      "subroutine": "smart_contracts.bidding_contract.contract.DigitalMarket.accept_bid",
+      "subroutine": "smart_contracts.bidding_contract.contract.BiddingMarket.accept_bid",
       "params": {},
       "block": "accept_bid",
       "stack_in": [],
@@ -2132,7 +2132,7 @@
       "op": "retsub"
     },
     "507": {
-      "subroutine": "smart_contracts.bidding_contract.contract.DigitalMarket.reject_bid",
+      "subroutine": "smart_contracts.bidding_contract.contract.BiddingMarket.reject_bid",
       "params": {},
       "block": "reject_bid",
       "stack_in": [],
@@ -2383,7 +2383,7 @@
       "op": "retsub"
     },
     "547": {
-      "subroutine": "smart_contracts.bidding_contract.contract.DigitalMarket.delete_application",
+      "subroutine": "smart_contracts.bidding_contract.contract.BiddingMarket.delete_application",
       "params": {},
       "block": "delete_application",
       "stack_in": [],

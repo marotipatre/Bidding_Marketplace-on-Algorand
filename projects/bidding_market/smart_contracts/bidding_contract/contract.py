@@ -2,7 +2,7 @@ from algopy import *
 from algopy.arc4 import abimethod
 
 
-class DigitalMarket(ARC4Contract):
+class BiddingMarket(ARC4Contract):
     assetid: UInt64
     floorprice: UInt64
     highest_bid: UInt64
